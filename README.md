@@ -86,10 +86,10 @@ fails, the customer is never left stuck — the WhatsApp button still works.
 
 | Cake | Price |
 |---|---|
-| Chocolate Truffle Cake | PKR 3,450 |
-| Red Velvet Cake | PKR 3,250 |
-| Carrot Walnut Cake | PKR 3,600 |
-| Strawberry Cream Cake | PKR 3,800 |
+| Chocolate Fudge Cake | PKR 3,450 |
+| Chocolate Ganache Bundt | PKR 3,250 |
+| Strawberry Cream Tart | PKR 3,600 |
+| Salted Caramel Cheesecake | PKR 3,800 |
 | Pistachio Rose Cake | PKR 4,250 |
 
 ---
@@ -115,16 +115,18 @@ Drop your own pictures into `assets/img/` using the same file names:
 
 ```
 hero.jpg
-cake-chocolate-truffle.jpg
-cake-red-velvet.jpg
-cake-carrot-walnut.jpg
-cake-strawberry-cream.jpg
-cake-pistachio.jpg
+cake-chocolate-fudge.jpg
+cake-chocolate-bundt.jpg
+cake-strawberry-tart.jpg
+cake-salted-caramel.jpg
+cake-pistachio-rose.jpg
 order-celebration.jpg
 ```
 
-Landscape photos around **4:3** (e.g. 1200 × 900) look best in the cake cards.
-File names in caps must match exactly.
+Square photos at **1200 × 1200** look best — the cards crop to 4:3 and the hero crops to
+a circle, so a square keeps the middle of the dish in frame. File names in caps must match
+exactly. The current placeholder photos are only 700 × 700, so your own will look sharper
+too.
 
 ### Change the logo
 
@@ -214,6 +216,7 @@ settings get a still page instead.
 
 | Version | Date | What changed |
 |---|---|---|
+| **v1.1** | 2026-09-26 | Replaced all seven photos after the first set were rejected as dull and homemade. New set chosen for genuine appetite appeal — glossy fudge squares, chocolate-ganache bundts, a bright strawberry tart, a salted-caramel cheesecake and a pistachio kunafa. The five cakes were renamed to match what is actually in each photo, prices and descriptions adjusted, credits rewritten. |
 | **v1.0** | 2026-09-26 | First release. One-page site: header with right-side menu, animated hero, about section with 3 steps, five-cake list with PKR prices, validating order form with WhatsApp handoff, footer with quote, scroll-reveal animations, custom cake-slice logo and generated favicons, placeholder stock photos with full credits. |
 
 ---
