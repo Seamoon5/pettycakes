@@ -3,61 +3,48 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PettyCakes — Order Celebration Cakes Online</title>
-<meta name="description" content="PettyCakes bakes hand-made celebration cakes — chocolate truffle, red velvet, carrot walnut, strawberry cream and pistachio rose. Pick your cake, tell us how you want it, and our kitchen team starts baking.">
+<title>PettyCakes — Celebration Cakes Baked to Order in Karachi</title>
+<meta name="description" content="PettyCakes bakes celebration cakes to order in Karachi — salted caramel cheesecake, strawberry glaze tart, carrot walnut, pistachio rose, chocolate ganache bundt and more. Scroll the menu, pick your cake, order in one short form.">
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-<meta property="og:title" content="PettyCakes — Order Celebration Cakes Online">
-<meta property="og:description" content="Hand-made celebration cakes, baked to order. Pick your flavour and our kitchen team starts baking.">
+<meta property="og:title" content="PettyCakes — Celebration Cakes Baked to Order">
+<meta property="og:description" content="Hand-made celebration cakes, baked the same evening you order them. Scroll the menu and pick your favourite.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Kaushan+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<a class="skip-link" href="#cakes">Skip to cake list</a>
+<a class="skip-link" href="#menu">Skip to the cake menu</a>
 
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="siteHeader">
-  <div class="wrap header-inner">
+  <div class="header-inner">
 
-    <a class="brand" href="#home" aria-label="PettyCakes home">
-      <span class="brand-mark">
-        <svg viewBox="0 0 64 64" role="img" aria-hidden="true" focusable="false">
-          <defs>
-            <linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#E8C46A"/>
-              <stop offset="1" stop-color="#C9A74D"/>
-            </linearGradient>
-          </defs>
-          <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#lg)"/>
-          <path d="M32 14c1.6 0 2.6 1.3 2.6 2.7 0 1.5-1.2 2.6-2.6 2.6s-2.6-1.1-2.6-2.6C29.4 15.3 30.4 14 32 14z" fill="#C0392B"/>
-          <rect x="30.9" y="19" width="2.2" height="5" rx="1.1" fill="#FFFFFF"/>
-          <path d="M17 26h30v6.2c0 2.6-1.7 3.6-3.6 3.6-2 0-2.9-1.2-4.4-1.2s-2.4 1.2-4.4 1.2-2.9-1.2-4.4-1.2-2.4 1.2-4.4 1.2-3.6-1-3.6-3.6V26z" fill="#FFFFFF"/>
-          <path d="M18.5 35.5h27c.9 0 1.5.7 1.4 1.6l-2.4 13.4c-.2 1.2-1.2 2-2.4 2H21.9c-1.2 0-2.2-.8-2.4-2l-2.4-13.4c-.1-.9.5-1.6 1.4-1.6z" fill="#FFF7E6"/>
-          <path d="M19.6 42.6h24.8l-.6 3.4c-.1.7-.7 1.2-1.4 1.2H21.6c-.7 0-1.3-.5-1.4-1.2l-.6-3.4z" fill="#E7B7A0"/>
-        </svg>
-      </span>
-      <span class="brand-text">Petty<em>Cakes</em></span>
+    <a class="brand" href="#home" aria-label="PettyCakes — back to top">
+      <span class="brand-script">petty</span><span class="brand-suffix">cakes</span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Main">
       <ul class="nav-list">
         <li><a href="#home"   class="nav-link is-active">Home</a></li>
-        <li><a href="#about"  class="nav-link">About</a></li>
-        <li><a href="#cakes"  class="nav-link">Cakes</a></li>
+        <li><a href="#story"  class="nav-link">Our Story</a></li>
+        <li><a href="#menu"   class="nav-link">Menu</a></li>
+        <li><a href="#how"    class="nav-link">How It Works</a></li>
         <li><a href="#order"  class="nav-link">Order</a></li>
       </ul>
-      <a href="#order" class="btn btn-gold nav-cta">Order Now</a>
     </nav>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-      <span></span><span></span><span></span>
+    <a href="#order" class="btn btn-outline btn-nav">Order Now</a>
+
+    <button class="nav-toggle" id="navToggle" type="button"
+            aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span class="nav-toggle-box" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
 
   </div>
@@ -66,254 +53,345 @@
 <main>
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="home">
-  <span class="hero-blob hero-blob-1" aria-hidden="true"></span>
-  <span class="hero-blob hero-blob-2" aria-hidden="true"></span>
+<section class="hero" id="home" data-hero>
+  <div class="hero-slides" id="heroSlides">
 
-  <div class="wrap hero-inner">
-
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="eyebrow-dot"></span>Baked fresh, to your message</p>
-      <h1 class="hero-title">
-        <span class="line"><span class="word">Cakes</span></span>
-        <span class="line"><span class="word">made for</span></span>
-        <span class="line"><span class="word gold-ital">every</span> <span class="word">celebration</span></span>
-      </h1>
-      <p class="hero-text">
-        Pick a flavour, tell us the occasion and the writing on top. Our kitchen team
-        bakes it from scratch, frosts it by hand and hands it over fresh — never from a freezer.
-      </p>
-      <div class="hero-actions">
-        <a href="#cakes" class="btn btn-gold btn-lg">Browse the cakes</a>
-        <a href="#order" class="btn btn-outline-dark btn-lg">Place an order</a>
+    <article class="hero-slide is-active" data-slide>
+      <div class="slide-media">
+        <img src="assets/img/hero-1.jpg" width="700" height="700" fetchpriority="high"
+             alt="A dark chocolate and walnut layer cake, cut to show its layers">
       </div>
-      <ul class="hero-stats">
-        <li><strong>48hr</strong><span>notice for most cakes</span></li>
-        <li><strong>100%</strong><span>fresh, no preservatives</span></li>
-        <li><strong>5</strong><span>signature flavours</span></li>
-      </ul>
-    </div>
-
-    <div class="hero-art">
-      <span class="ring ring-1" aria-hidden="true"></span>
-      <span class="ring ring-2" aria-hidden="true"></span>
-      <span class="sparkle sp-1" aria-hidden="true"></span>
-      <span class="sparkle sp-2" aria-hidden="true"></span>
-      <span class="sparkle sp-3" aria-hidden="true"></span>
-      <span class="sparkle sp-4" aria-hidden="true"></span>
-
-      <div class="hero-photo">
-        <img src="assets/img/hero.jpg" width="1024" height="680"
-             alt="A two-layer chocolate and walnut cake with coffee cream frosting and walnuts on top">
+      <div class="slide-body">
+        <p class="kicker kicker-light">Baked to order · Karachi</p>
+        <h1 class="hero-title">Cakes made for your celebration</h1>
+        <p class="hero-text">Pick a flavour from the menu, tell us the date and the message you want
+          written on top. Our kitchen starts the same evening.</p>
+        <a href="#menu" class="btn btn-outline btn-light">See the menu</a>
       </div>
+    </article>
 
-      <div class="chip chip-price" aria-hidden="true">
-        <span class="chip-label">Signature</span>
-        <span class="chip-value">Chocolate Fudge</span>
+    <article class="hero-slide" data-slide>
+      <div class="slide-media">
+        <img src="assets/img/hero-2.jpg" width="700" height="700" loading="lazy"
+             alt="A tall tower of cream buns glazed and filled with jam">
       </div>
-      <div class="chip chip-note" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#C9A74D" d="M12 2l2.6 6.3 6.8.4-5.2 4.4 1.6 6.6L12 16.2 6.2 19.7l1.6-6.6L2.6 8.7l6.8-.4L12 2z"/></svg>
-        <span>Hand piped</span>
+      <div class="slide-body">
+        <p class="kicker kicker-light">Fresh every single morning</p>
+        <h2 class="hero-title">No mixes. No shortcuts.</h2>
+        <p class="hero-text">Real butter, real cream, real chocolate. We bake in small batches and
+          frost every cake by hand, so nothing ever comes out of a freezer.</p>
+        <a href="#story" class="btn btn-outline btn-light">Read our story</a>
       </div>
-    </div>
+    </article>
+
+    <article class="hero-slide" data-slide>
+      <div class="slide-media">
+        <img src="assets/img/hero-3.jpg" width="700" height="700" loading="lazy"
+             alt="An apple and almond frangipane tart with a glossy caramel top">
+      </div>
+      <div class="slide-body">
+        <p class="kicker kicker-light">Seven years of celebrations</p>
+        <h2 class="hero-title">Write it in chocolate</h2>
+        <p class="hero-text">Tell us the name, the colours and the words. We pipe it by hand in
+          chocolate or cream, exactly the way you asked for it.</p>
+        <a href="#order" class="btn btn-outline btn-light">Start your order</a>
+      </div>
+    </article>
 
   </div>
 
-  <a class="scroll-cue" href="#about" aria-label="Scroll to About">
-    <span class="scroll-cue-line"></span>
-    <span class="scroll-cue-text">scroll</span>
-  </a>
+  <div class="hero-foot">
+    <p class="hero-cue" aria-hidden="true"><span class="hero-cue-line"></span>Scroll</p>
+    <div class="hero-dots" id="heroDots" role="tablist" aria-label="Choose a slide"></div>
+  </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="about" id="about">
+<!-- ============ OUR STORY ============ -->
+<section class="story" id="story">
   <div class="wrap">
 
-    <div class="sec-head" data-reveal>
-      <p class="eyebrow centered"><span class="eyebrow-dot"></span>About PettyCakes</p>
-      <h2 class="sec-title">A small kitchen built for one thing:<br><em class="gold-ital">cakes worth celebrating</em></h2>
-      <p class="sec-lede">
-        PettyCakes is an online cake bakery. You pick a cake and tell us how you want it,
-        our team gets the notification, and we start baking. There is no cart to fight with
-        and no checkout that loses your message — you talk to the people who make the cake.
-      </p>
+    <header class="sec-head" data-reveal>
+      <p class="kicker">Our story</p>
+      <h2 class="sec-title">A small kitchen with one simple idea</h2>
+    </header>
+
+    <div class="story-grid">
+
+      <div class="story-copy" data-reveal>
+        <p class="story-lede">
+          PettyCakes started with one oven, one fridge and a lot of birthdays. Seven years later
+          the oven is bigger, but the way we work has not changed at all.
+        </p>
+        <p>
+          Nothing is made the day before. When your order comes in, we bake the sponge that morning,
+          fill it, frost it and box it — so what you collect is still soft enough to eat with a fork.
+          That is the whole reason people keep coming back instead of buying a cake from a shelf.
+        </p>
+        <p>
+          We also do the small things properly: a proper crumb, a filling that is not too sweet, and
+          writing that is neat enough to photograph. If you have an idea in your head, describe it in
+          the order form and we will tell you honestly what is possible.
+        </p>
+        <a href="#menu" class="btn btn-solid">Look at the cakes</a>
+      </div>
+
+      <div class="story-media" data-reveal data-reveal-delay="120">
+        <figure class="story-photo story-photo-tall">
+          <img src="assets/img/story-almond-cake.jpg" width="700" height="700" loading="lazy"
+               alt="A slice of Norwegian almond cake topped with yellow buttercream and chocolate shavings">
+        </figure>
+        <figure class="story-photo story-photo-small">
+          <img src="assets/img/story-berry-pie.jpg" width="700" height="700" loading="lazy"
+               alt="A berry pie with a golden pastry lid, cut open on a plate">
+        </figure>
+      </div>
+
     </div>
 
-    <div class="steps">
+    <ul class="feature-row" data-reveal>
+      <li class="feature">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M6 27h20M9 27v-9a7 7 0 0 1 14 0v9M16 6v5M11 8l1.6 2M21 8l-1.6 2"/></svg>
+        </span>
+        <h3>Baked to order</h3>
+        <p>Your cake goes into the oven the day you order it. Never before, never from a freezer.</p>
+      </li>
+      <li class="feature">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M16 4c3.2 3.6 6 6.6 6 10.2A6 6 0 0 1 16 21a6 6 0 0 1-6-6.8C10 10.6 12.8 7.6 16 4zM7 25h18"/></svg>
+        </span>
+        <h3>Small batches</h3>
+        <p>Six to eight cakes a day, so every one gets the same attention as the first.</p>
+      </li>
+      <li class="feature">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 20h22M8 20l3-9h10l3 9M8 20v4h16v-4M13 11V8a3 3 0 0 1 6 0v3"/></svg>
+        </span>
+        <h3>Hand piped</h3>
+        <p>Names, numbers and patterns piped by hand in chocolate or cream, the way you wrote them.</p>
+      </li>
+    </ul>
 
-      <article class="step" data-reveal data-reveal-delay="0">
+  </div>
+</section>
+
+<!-- ============ THE MENU — horizontal scroll driven by page scroll ============ -->
+<section class="menu" id="menu" data-menu>
+  <div class="menu-sticky">
+
+    <div class="menu-head">
+      <p class="kicker">The menu</p>
+      <h2 class="menu-title" id="menuTitle">Pick your favourite</h2>
+      <p class="menu-hint" id="menuHint">Keep scrolling to move through the list</p>
+    </div>
+
+    <div class="menu-stage">
+
+      <div class="menu-viewport" id="menuViewport">
+        <ul class="menu-track" id="menuTrack" aria-label="Cake list">
+
+          <li class="menu-item" data-name="Salted Caramel Cheesecake" data-price="3800">
+            <button class="menu-card" type="button"
+                    data-desc="Baked cheesecake on a biscuit base, flooded with salted caramel and a cluster of golden caramel crunch. Silky, rich and not too sweet."
+                    data-meta="Serves 12–14|Contains dairy">
+              <span class="menu-num">01</span>
+              <span class="menu-shot">
+                <img src="assets/img/cake-salted-caramel-cheesecake.jpg" width="700" height="700" loading="lazy"
+                     alt="Salted caramel cheesecake slice drizzled with caramel, topped with chopped nuts">
+              </span>
+              <span class="menu-cap">Salted Caramel Cheesecake</span>
+            </button>
+          </li>
+
+          <li class="menu-item" data-name="Strawberry Glaze Tart" data-price="3600">
+            <button class="menu-card" type="button"
+                    data-desc="Sweet pastry shell brushed with vanilla custard, then packed with whole strawberries under a glossy strawberry glaze. Best served cool."
+                    data-meta="Serves 10–12|Contains dairy">
+              <span class="menu-num">02</span>
+              <span class="menu-shot">
+                <img src="assets/img/cake-strawberry-glaze-tart.jpg" width="700" height="700" loading="lazy"
+                     alt="A strawberry tart filled with glazed red strawberries in a pastry shell">
+              </span>
+              <span class="menu-cap">Strawberry Glaze Tart</span>
+            </button>
+          </li>
+
+          <li class="menu-item" data-name="Carrot Walnut Cake" data-price="3450">
+            <button class="menu-card" type="button"
+                    data-desc="A damp spice sponge packed with grated carrot and walnuts, finished with a tangy cream cheese frosting and a little orange zest."
+                    data-meta="Serves 10–12|Contains nuts">
+              <span class="menu-num">03</span>
+              <span class="menu-shot">
+                <img src="assets/img/cake-carrot-walnut.jpg" width="700" height="700" loading="lazy"
+                     alt="A slice of carrot cake topped with cream cheese frosting and orange zest">
+              </span>
+              <span class="menu-cap">Carrot Walnut Cake</span>
+            </button>
+          </li>
+
+          <li class="menu-item" data-name="Pistachio Rose Cake" data-price="4250">
+            <button class="menu-card" type="button"
+                    data-desc="A soft kunafa-style base filled with Sicilian pistachio cream, sealed under a dark chocolate lid and dusted with crushed pistachios."
+                    data-meta="Serves 12–14|Contains nuts">
+              <span class="menu-num">04</span>
+              <span class="menu-shot">
+                <img src="assets/img/cake-pistachio-rose.jpg" width="700" height="700" loading="lazy"
+                     alt="A dark chocolate pistachio cake dusted with bright green crushed pistachios">
+              </span>
+              <span class="menu-cap">Pistachio Rose Cake</span>
+            </button>
+          </li>
+
+          <li class="menu-item" data-name="Chocolate Ganache Bundt" data-price="3250">
+            <button class="menu-card" type="button"
+                    data-desc="A soft chocolate bundt flooded with warm ganache and scattered with white and dark chocolate chips. Rich, soft and made to share."
+                    data-meta="Serves 10–12|Egg &amp; dairy">
+              <span class="menu-num">05</span>
+              <span class="menu-shot">
+                <img src="assets/img/cake-chocolate-ganache-bundt.jpg" width="700" height="700" loading="lazy"
+                     alt="A ring-shaped chocolate bundt cake glazed with ganache and chocolate chips">
+              </span>
+              <span class="menu-cap">Chocolate Ganache Bundt</span>
+            </button>
+          </li>
+
+          <li class="menu-item" data-name="Rocky Road Fudge Bark" data-price="2900">
+            <button class="menu-card" type="button"
+                    data-desc="A tray of deep fudgy squares loaded with marshmallow, walnuts and dark chocolate. Cut into generous squares, never thin."
+                    data-meta="Serves 16–20|Contains nuts">
+              <span class="menu-num">06</span>
+              <span class="menu-shot">
+                <img src="assets/img/cake-rocky-road-fudge.jpg" width="700" height="700" loading="lazy"
+                     alt="Rocky road fudge squares with marshmallows and chopped nuts on top">
+              </span>
+              <span class="menu-cap">Rocky Road Fudge Bark</span>
+            </button>
+          </li>
+
+          <li class="menu-item" data-name="Cinnamon Rice Tart" data-price="3500">
+            <button class="menu-card" type="button"
+                    data-desc="A buttery pastry shell filled with creamy rice pudding, cinnamon and golden raisins, baked until the top catches a little colour."
+                    data-meta="Serves 10–12|Contains dairy">
+              <span class="menu-num">07</span>
+              <span class="menu-shot">
+                <img src="assets/img/cake-cinnamon-rice-tart.jpg" width="700" height="700" loading="lazy"
+                     alt="A slice of cinnamon rice pudding tart dusted with spice">
+              </span>
+              <span class="menu-cap">Cinnamon Rice Tart</span>
+            </button>
+          </li>
+
+          <li class="menu-item" data-name="Key Lime Pie" data-price="3400">
+            <button class="menu-card" type="button"
+                    data-desc="A crisp biscuit base under a sharp lime custard, topped with a thick meringue torched until the edges go golden."
+                    data-meta="Serves 10–12|Contains dairy">
+              <span class="menu-num">08</span>
+              <span class="menu-shot">
+                <img src="assets/img/cake-key-lime-pie.jpg" width="700" height="700" loading="lazy"
+                     alt="A key lime pie with a pale custard filling topped with fresh lime slices">
+              </span>
+              <span class="menu-cap">Key Lime Pie</span>
+            </button>
+          </li>
+
+          <li class="menu-item menu-item-custom" data-name="Your Own Design" data-price="">
+            <button class="menu-card" type="button"
+                    data-desc="A themed shape, a three-tier birthday cake, egg-free, less sugar, a filling you love — describe what you have in mind and we will price it for you."
+                    data-meta="Any size|Custom filling">
+              <span class="menu-num">09</span>
+              <span class="menu-shot menu-shot-tile">
+                <span class="tile-title">Your cake,<br>your way</span>
+                <span class="tile-note">Tell us the shape, the size and the flavour — we will price it for you.</span>
+              </span>
+              <span class="menu-cap">Your Own Design</span>
+            </button>
+          </li>
+
+        </ul>
+        <span class="menu-fade" aria-hidden="true"></span>
+      </div>
+
+      <aside class="menu-panel" aria-labelledby="menuTitle">
+        <p class="panel-count"><span id="panelNum">01</span> <span class="panel-slash">/</span> <span id="panelTotal">08</span></p>
+
+        <h3 class="panel-name" id="panelName" aria-live="polite">Salted Caramel Cheesecake</h3>
+        <p class="panel-desc" id="panelDesc"></p>
+        <ul class="panel-meta" id="panelMeta"></ul>
+
+        <p class="panel-price"><span class="panel-cur">PKR</span> <span id="panelPrice">3,800</span></p>
+
+        <div class="panel-actions">
+          <button class="btn btn-solid" type="button" id="panelOrder">Order this cake</button>
+          <button class="btn btn-ghost" type="button" id="panelNext">Next cake</button>
+        </div>
+
+        <div class="menu-dots" id="menuDots" role="group" aria-label="Jump to a cake"></div>
+        <span class="menu-progress" aria-hidden="true"><i id="menuProgressBar"></i></span>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCROLLING TEXT ============ -->
+<section class="marquee" aria-hidden="true">
+  <div class="marquee-row" id="marqueeRow">
+    <span>No preservatives</span><i>&#9670;</i>
+    <span>Baked the same day</span><i>&#9670;</i>
+    <span>Hand piped messages</span><i>&#9670;</i>
+    <span>48 hours notice</span><i>&#9670;</i>
+    <span>No preservatives</span><i>&#9670;</i>
+    <span>Baked the same day</span><i>&#9670;</i>
+    <span>Hand piped messages</span><i>&#9670;</i>
+    <span>48 hours notice</span><i>&#9670;</i>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="how">
+  <div class="wrap">
+
+    <header class="sec-head" data-reveal>
+      <p class="kicker">How it works</p>
+      <h2 class="sec-title">Three steps, no checkout maze</h2>
+      <p class="sec-lede">There is no cart to fight with here. You pick a cake, send one short form,
+        and you talk directly to the people who will bake it.</p>
+    </header>
+
+    <ol class="steps">
+      <li class="step" data-reveal>
         <span class="step-num">01</span>
-        <span class="step-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="30" height="30"><path fill="none" stroke="#C9A74D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h24v13a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V12zM4 12l3-6h18l3 6M13 19h6"/></svg>
-        </span>
-        <h3>You choose a cake</h3>
-        <p>Five signature flavours, each one priced clearly. Every card tells you the flavour,
-           the filling and what it is usually decorated with.</p>
-      </article>
-
-      <article class="step" data-reveal data-reveal-delay="120">
+        <h3>Choose from the menu</h3>
+        <p>Scroll the list above, read the details and pick the one you want. Every cake shows its
+          price, its size and what it contains.</p>
+      </li>
+      <li class="step" data-reveal data-reveal-delay="100">
         <span class="step-num">02</span>
-        <span class="step-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="30" height="30"><path fill="none" stroke="#C9A74D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 4h15l5 5v19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM21 4v5h5M10 17h11M10 22h7"/></svg>
-        </span>
-        <h3>You send one short form</h3>
-        <p>Your name, contact number, the date you need it and any customisation — the writing
-           on top, the colours, extra filling. That is all we need to start.</p>
-      </article>
-
-      <article class="step" data-reveal data-reveal-delay="240">
+        <h3>Send one short form</h3>
+        <p>Your name, contact number, the date you need it and anything custom — the message on top,
+          the colours, an extra filling. That is all we need.</p>
+      </li>
+      <li class="step" data-reveal data-reveal-delay="200">
         <span class="step-num">03</span>
-        <span class="step-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="30" height="30"><path fill="none" stroke="#C9A74D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 28h20M9 28v-9a7 7 0 0 1 14 0v9M16 5v5M11 7l1.5 2M21 7l-1.5 2"/></svg>
-        </span>
-        <h3>We bake it fresh for you</h3>
-        <p>Our team gets your order notification, confirms the details with you on WhatsApp,
-           then bakes, fills, frosts and packs it — ready for pickup or delivery.</p>
-      </article>
-
-    </div>
-
-    <div class="about-note" data-reveal>
-      <p>
-        <strong>Good to know:</strong> we bake to order, so please give us at least 48 hours notice.
-        Allergens, egg-free, less sugar or a different size — put it in the customisation box and
-        we will tell you honestly what is possible.
-      </p>
-    </div>
+        <h3>We bake and hand it over</h3>
+        <p>We confirm everything with you first, then bake, fill, frost and pack it fresh for pickup
+          or delivery across Karachi.</p>
+      </li>
+    </ol>
 
   </div>
 </section>
 
-<!-- ============ CAKE LIST ============ -->
-<section class="cakes" id="cakes">
-  <div class="wrap">
-
-    <div class="sec-head" data-reveal>
-      <p class="eyebrow centered"><span class="eyebrow-dot"></span>The cake list</p>
-      <h2 class="sec-title">Five cakes, <em class="gold-ital">done properly</em></h2>
-      <p class="sec-lede">
-        Prices are per cake and include the writing on top. Tap any cake to send it straight
-        to the order form.
-      </p>
-    </div>
-
-    <div class="cake-grid">
-
-      <article class="cake-card" data-reveal data-reveal-delay="80"
-               data-cake="Chocolate Fudge Cake" data-price="3450">
-        <div class="cake-media">
-          <img src="assets/img/cake-chocolate-fudge.jpg" width="700" height="700"
-               alt="Chocolate Fudge Cake — a tray of deep, fudgy chocolate squares baked with dark cocoa and finished with fresh raspberries."
-               loading="lazy">
-        </div>
-        <div class="cake-body">
-          <h3 class="cake-name">Chocolate Fudge Cake</h3>
-          <p class="cake-desc">A tray of deep, fudgy chocolate squares baked with dark cocoa and finished with fresh raspberries. Cut into generous squares, never thin.</p>
-          <p class="cake-meta"><span>24 squares</span><span>Egg &amp; dairy</span></p>
-          <div class="cake-foot">
-            <p class="cake-price"><span class="cur">PKR</span> 3,450</p>
-            <button class="btn btn-outline-dark btn-sm js-pick" type="button"
-                    data-cake="Chocolate Fudge Cake">Order this</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="cake-card" data-reveal data-reveal-delay="160"
-               data-cake="Chocolate Ganache Bundt" data-price="3250">
-        <div class="cake-media">
-          <img src="assets/img/cake-chocolate-bundt.jpg" width="700" height="700"
-               alt="Chocolate Ganache Bundt — a glossy chocolate bundt flooded with warm ganache and scattered with white and dark chocolate chips."
-               loading="lazy">
-        </div>
-        <div class="cake-body">
-          <h3 class="cake-name">Chocolate Ganache Bundt</h3>
-          <p class="cake-desc">A glossy chocolate bundt flooded with warm ganache and scattered with white and dark chocolate chips. Rich, soft and made to share.</p>
-          <p class="cake-meta"><span>Serves 10–12</span><span>Egg &amp; dairy</span></p>
-          <div class="cake-foot">
-            <p class="cake-price"><span class="cur">PKR</span> 3,250</p>
-            <button class="btn btn-outline-dark btn-sm js-pick" type="button"
-                    data-cake="Chocolate Ganache Bundt">Order this</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="cake-card" data-reveal data-reveal-delay="240"
-               data-cake="Strawberry Cream Tart" data-price="3600">
-        <div class="cake-media">
-          <img src="assets/img/cake-strawberry-tart.jpg" width="700" height="700"
-               alt="Strawberry Cream Tart — buttery tart shell filled with vanilla custard and packed with glossy strawberries macerated in their own sugar."
-               loading="lazy">
-        </div>
-        <div class="cake-body">
-          <h3 class="cake-name">Strawberry Cream Tart</h3>
-          <p class="cake-desc">Buttery tart shell filled with vanilla custard and packed with glossy strawberries macerated in their own sugar. Best served chilled.</p>
-          <p class="cake-meta"><span>Serves 10–12</span><span>Contains dairy</span></p>
-          <div class="cake-foot">
-            <p class="cake-price"><span class="cur">PKR</span> 3,600</p>
-            <button class="btn btn-outline-dark btn-sm js-pick" type="button"
-                    data-cake="Strawberry Cream Tart">Order this</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="cake-card" data-reveal data-reveal-delay="320"
-               data-cake="Salted Caramel Cheesecake" data-price="3800">
-        <div class="cake-media">
-          <img src="assets/img/cake-salted-caramel.jpg" width="700" height="700"
-               alt="Salted Caramel Cheesecake — baked cheesecake on a biscuit base, topped with salted caramel and a cluster of golden caramel crunch."
-               loading="lazy">
-        </div>
-        <div class="cake-body">
-          <h3 class="cake-name">Salted Caramel Cheesecake</h3>
-          <p class="cake-desc">Baked cheesecake on a biscuit base, topped with salted caramel and a cluster of golden caramel crunch. Silky, rich and not too sweet.</p>
-          <p class="cake-meta"><span>Serves 12–14</span><span>Contains dairy</span></p>
-          <div class="cake-foot">
-            <p class="cake-price"><span class="cur">PKR</span> 3,800</p>
-            <button class="btn btn-outline-dark btn-sm js-pick" type="button"
-                    data-cake="Salted Caramel Cheesecake">Order this</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="cake-card" data-reveal data-reveal-delay="0"
-               data-cake="Pistachio Rose Cake" data-price="4250">
-        <div class="cake-media">
-          <img src="assets/img/cake-pistachio-rose.jpg" width="700" height="700"
-               alt="Pistachio Rose Cake — a soft kunafa-style base filled with sicilian pistachio cream and sealed under a dark chocolate lid, dusted with crushed pistachios."
-               loading="lazy">
-        </div>
-        <div class="cake-body">
-          <h3 class="cake-name">Pistachio Rose Cake</h3>
-          <p class="cake-desc">A soft kunafa-style base filled with Sicilian pistachio cream and sealed under a dark chocolate lid, dusted with crushed pistachios.</p>
-          <p class="cake-meta"><span>Serves 12–14</span><span>Contains nuts</span></p>
-          <div class="cake-foot">
-            <p class="cake-price"><span class="cur">PKR</span> 4,250</p>
-            <button class="btn btn-outline-dark btn-sm js-pick" type="button"
-                    data-cake="Pistachio Rose Cake">Order this</button>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <p class="cakes-foot" data-reveal>
-      Need a bigger size, a tiered cake or a flavour that is not on the list?
-      <a href="#order">Tell us in the order form</a> — we bake most custom shapes on request.
-    </p>
-
-  </div>
-</section>
-
-<!-- ============ ORDER FORM ============ -->
+<!-- ============ ORDER ============ -->
 <section class="order" id="order">
-  <div class="wrap order-inner">
+  <div class="wrap order-grid">
 
     <div class="order-aside" data-reveal>
-      <p class="eyebrow"><span class="eyebrow-dot"></span>Place your order</p>
-      <h2 class="sec-title">Tell us what you need.<br><em class="gold-ital">We take it from there.</em></h2>
+      <p class="kicker">Place your order</p>
+      <h2 class="sec-title">Tell us what you need</h2>
       <p class="order-lede">
-        Fill this in and our team gets notified immediately. We reply on WhatsApp or phone to
-        confirm the design, the price and the pickup or delivery time before we start baking.
+        Fill this in and the order lands with our team straight away. We reply on WhatsApp or phone to
+        confirm the design, the final price and the pickup time before we start baking.
       </p>
 
       <ol class="next-list">
@@ -323,9 +401,8 @@
       </ol>
 
       <figure class="order-photo">
-        <img src="assets/img/order-celebration.jpg" width="1024" height="694"
-             alt="A slice of dulce de leche cheesecake drizzled with caramel on a vintage plate"
-             loading="lazy">
+        <img src="assets/img/order-dulce-de-leche.jpg" width="700" height="700" loading="lazy"
+             alt="A slice of dulce de leche cheesecake drizzled with caramel on a plate">
       </figure>
     </div>
 
@@ -340,7 +417,7 @@
             </select>
             <span class="select-arrow" aria-hidden="true"></span>
           </div>
-          <p class="hint" id="cakeHint">Pick a cake, or type what you want below.</p>
+          <p class="hint" id="cakeHint">Pick a cake from the menu above, or type what you want below.</p>
         </div>
 
         <div class="field-row">
@@ -373,32 +450,27 @@
         <div class="field">
           <label for="custom">Customisation details</label>
           <textarea id="custom" name="custom" rows="5"
-            placeholder="Writing on top, colours, theme, number of tiers, extra filling, allergies, pickup or delivery address&hellip;"></textarea>
+            placeholder="Writing on top, colours, theme, number of tiers, extra filling, allergies, pickup or delivery address..."></textarea>
           <p class="hint">The more detail you give, the closer we get to what you pictured.</p>
         </div>
 
         <p class="form-error" id="formError" role="alert" hidden></p>
 
-        <button type="submit" class="btn btn-gold btn-lg btn-block" id="submitBtn">
-          Send my order
-        </button>
+        <button type="submit" class="btn btn-solid btn-block" id="submitBtn">Send my order</button>
 
-        <p class="form-small">
-          No payment now. We confirm everything with you first.
-        </p>
-
+        <p class="form-small">No payment now. We confirm everything with you first.</p>
       </form>
 
       <div class="order-done" id="orderDone" hidden>
         <span class="done-tick" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="30" height="30"><path fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
         </span>
         <h3>Order received</h3>
         <p id="doneText">Thank you. Our team has your order and will confirm the details with you shortly.</p>
         <a class="btn btn-wa btn-block" id="waLink" href="#" target="_blank" rel="noopener">
           Send it on WhatsApp too
         </a>
-        <button class="btn btn-ghost-dark" type="button" id="orderAgain">Place another order</button>
+        <button class="btn btn-ghost" type="button" id="orderAgain">Place another order</button>
       </div>
 
     </div>
@@ -406,15 +478,64 @@
   </div>
 </section>
 
+<!-- ============ ALSO ON THE COUNTER ============ -->
+<section class="counter" id="counter">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="kicker">Also on the counter</p>
+      <h2 class="sec-title">The rest of the bakehouse</h2>
+    </header>
+  </div>
+
+  <ul class="counter-grid">
+    <li class="counter-item" data-reveal><img src="assets/img/kitchen-chocolate-souffle.jpg" width="700" height="700" loading="lazy" alt="Chocolate souffles in white ramekins dusted with cocoa"></li>
+    <li class="counter-item" data-reveal data-reveal-delay="60"><img src="assets/img/kitchen-rhubarb-pie.jpg" width="700" height="700" loading="lazy" alt="A rhubarb and quark pie with a lattice pastry top"></li>
+    <li class="counter-item" data-reveal data-reveal-delay="120"><img src="assets/img/kitchen-coconut-squares.jpg" width="700" height="700" loading="lazy" alt="Stacked chocolate and coconut squares"></li>
+    <li class="counter-item" data-reveal data-reveal-delay="180"><img src="assets/img/kitchen-lamington.jpg" width="700" height="700" loading="lazy" alt="Chocolate lamington cubes rolled in coconut"></li>
+    <li class="counter-item" data-reveal data-reveal-delay="240"><img src="assets/img/kitchen-butter-cake.jpg" width="700" height="700" loading="lazy" alt="A golden Dutch butter cake cut into wedges"></li>
+    <li class="counter-item" data-reveal data-reveal-delay="300"><img src="assets/img/kitchen-passion-mousse.jpg" width="700" height="700" loading="lazy" alt="Passion fruit mousse cups topped with seeds"></li>
+  </ul>
+</section>
+
 </main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap">
-    <p class="footer-quote">
-      &ldquo;A cake is the piece of everyone&rsquo;s day that nobody wants to throw away.&rdquo;
-    </p>
-    <p class="footer-copy">&copy; <span id="year">2026</span> PettyCakes. All rights reserved.</p>
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-script">petty</span><span class="brand-suffix">cakes</span>
+        <p>Celebration cakes baked to order in Karachi. Fresh every day, nothing from a freezer.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#story">Our story</a></li>
+          <li><a href="#menu">The menu</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#order">Order</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-news" id="newsletter">
+        <h3>Get the seasonal list</h3>
+        <p>One short email when a new flavour lands. No spam, ever.</p>
+        <form id="newsForm" class="news-form" novalidate>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input type="email" id="newsEmail" name="newsEmail" placeholder="you@example.com" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit" id="newsBtn">Subscribe</button>
+        </form>
+        <p class="news-note" id="newsNote" role="status" hidden>Thanks — you are on the list.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; <span id="year">2026</span> PettyCakes. All rights reserved.</p>
+      <p class="footer-quote">&ldquo;A cake is the part of everyone&rsquo;s day that nobody wants to throw away.&rdquo;</p>
+    </div>
+
   </div>
 </footer>
 

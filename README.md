@@ -1,17 +1,36 @@
 # PettyCakes
 
-A one-page website for selling cakes online. Visitors browse five cakes, pick one, fill
-in a short form, and your team gets the order and starts baking.
+A one-page website for selling cakes online. Visitors scroll the menu, read each cake's
+details, pick one, fill in a short form, and your team gets the order and starts baking.
 
-Built to the design system in `DESIGN.md` / `SKILL.md` (extracted from
-`lalschocolates.com`): white canvas, gold `#c9a74d` accent, Libre Caslon Text headings,
-Montserrat body, generous rounded corners, 8px spacing grid.
+Design language taken from **[minon.com.tr](https://www.minon.com.tr/)** (the design
+system you saved as `SKILL-minon-com-tr.md` / `DESIGN-minon-com-tr.md`): white canvas,
+**Jost** everywhere, uppercase headings with tight letter-spacing, thin hairline rules,
+square corners, monochrome plus one grey accent (`#888888`), and square product photos
+with a tiny vendor line under each one. Everything is in **English**.
+
+---
+
+## The one thing that makes this site different
+
+**The menu is a horizontal row that your page scroll drives.** As you scroll down, the
+cakes glide in from the right, one at a time. Whichever cake is in focus gets its name,
+description, price and an **Order this cake** button shown in the panel on the right.
+
+- Each cake holds still for a moment, then glides to the next one — so nothing feels
+  twitchy no matter how fast you scroll.
+- The focused cake is full size and full colour; the ones on either side step back.
+- Dots under the panel let you jump straight to a cake, and a thin line shows how far
+  through the list you are.
+- Arrow keys (`←` `→`) move through the list when the menu has keyboard focus.
+- **On a phone there is no scroll-hijacking** — the row becomes a normal swipeable
+  carousel and the panel underneath follows whatever is centred.
+- If the visitor has "reduce motion" switched on in their device, the site gives them the
+  swipeable version too.
 
 ---
 
 ## Quick start
-
-You have two easy ways to look at it.
 
 **Option A — just open it (easiest)**
 Double-click `index.html`. It opens in your browser straight away.
@@ -30,185 +49,106 @@ Then open <http://localhost:8080> in Chrome. Press `Ctrl+C` in the terminal to s
 
 ---
 
+## Make it yours — the only file you need to touch
+
+Open **`js/main.js`** and edit the block at the very top:
+
+```js
+var SHOP = {
+  whatsapp: "923001234567",   // digits only, no "+" and no spaces
+  formspree: "",             // optional, see below
+  minNoticeHours: 48         // earliest order date the form allows
+};
+```
+
+| Setting | What it does |
+|---|---|
+| `whatsapp` | Your WhatsApp number: country code + number, digits only. `+92 300 1234567` becomes `"923001234567"`. |
+| `formspree` | Leave `""` and orders arrive on WhatsApp only. To also get them by email, create a free form at [formspree.io](https://formspree.io), copy the endpoint (`https://formspree.io/f/abcdwxyz`) and paste it in. |
+| `minNoticeHours` | How much notice you need. The date picker refuses anything earlier. |
+
+Then swap the text in **`index.html`**: your city, your WhatsApp line in the footer, the
+cake names, the descriptions and the prices. **Cakes live in one place only** — each
+menu item carries its own `data-name`, `data-price`, `data-desc` and `data-meta`, and the
+detail panel *and* the order dropdown are both generated from that markup, so they can
+never drift apart. To add a cake, copy one `<li class="menu-item">` block, change the
+values and the photo, and it appears in the row, in the panel and in the dropdown at once.
+
+---
+
 ## How an order reaches your team
 
 The site works with **no backend and no hosting costs**, using the way small bakeries in
 Pakistan already take orders — WhatsApp.
 
 1. The customer fills the form and presses **Send my order**.
-2. The page shows a confirmation and a green **Send it on WhatsApp too** button.
-3. Pressing that button opens WhatsApp with the whole order already typed out — cake,
-   quantity, date, name, phone, email and their customisation notes.
+2. The page checks everything (all fields marked, a real email address, a phone number
+   with at least 10 digits, a date that respects your notice time) and names the exact
+   fields that need fixing instead of saying "something is wrong".
+3. A confirmation appears with a green **Send it on WhatsApp too** button.
+4. Pressing it opens WhatsApp with the whole order already typed out — cake, quantity,
+   date, name, phone, email and the customisation note.
 
-All they do is press send. Your team receives it on your number.
-
-### Changing the WhatsApp number
-
-Open `js/main.js` and change one line at the very top:
-
-```js
-var SHOP = {
-  whatsapp: "923001234567",   // <-- your number: country code + number, digits only
-  ...
-};
-```
-
-For a Pakistani number `+92 300 1234567`, write `"923001234567"` — no `+`, no spaces,
-no dashes.
-
-### Optional: also get orders by email
-
-If you would rather have a copy of every order in your inbox, sign up at
-<https://formspree.io> (free tier is fine to start), create a form, and paste its
-endpoint into the same config block:
-
-```js
-formspree: "https://formspree.io/f/abcdwxyz",
-```
-
-The form then emails you the order *and* still shows the WhatsApp button. If the email
-fails, the customer is never left stuck — the WhatsApp button still works.
+If you set `formspree`, the order is also emailed to you the moment the form is sent, and
+WhatsApp stays as the backup.
 
 ---
 
-## What is on the page
+## Changing the cakes and photos
 
-| Section | What it does |
+Photos live in `assets/img/` and are all **square (1:1)**. Keep the file names and drop
+your own photos in their place — that is the whole procedure.
+
+| File | Where it appears |
 |---|---|
-| **Header** | Logo + menu on the right (Home, About, Cakes, Order). Collapses to a hamburger under 720px. The current section is underlined while you scroll. |
-| **Hero** | What the site is about, with animated word-by-word entrance, a slowly turning gold ring, floating sparkle shapes and a gently bobbing cake photo. |
-| **About** | Plain explanation of how PettyCakes works, as three numbered steps: choose a cake → send one short form → we bake it fresh. Plus the 48-hour notice note. |
-| **Cake List** | Five cakes, each with photo, description, serves/allergen tags and price in PKR. Every **Order this** button jumps to the form with that cake already selected. |
-| **Order Form** | Cake dropdown, quantity, date needed, name, email, phone, customisation box. Validates as you type and names the exact field that needs fixing. |
-| **Footer** | A cake quote and the copyright line. |
+| `hero-1.jpg` `hero-2.jpg` `hero-3.jpg` | The three hero slides |
+| `cake-*.jpg` | The menu row (one per cake, in order) |
+| `story-*.jpg` | Our story photos |
+| `order-dulce-de-leche.jpg` | The photo beside the order form |
+| `kitchen-*.jpg` | The "Also on the counter" grid |
 
-### The five cakes
+If you change the number of cakes, nothing else to do — the row, the panel, the dots and
+the dropdown all size themselves.
 
-| Cake | Price |
-|---|---|
-| Chocolate Fudge Cake | PKR 3,450 |
-| Chocolate Ganache Bundt | PKR 3,250 |
-| Strawberry Cream Tart | PKR 3,600 |
-| Salted Caramel Cheesecake | PKR 3,800 |
-| Pistachio Rose Cake | PKR 4,250 |
+Read **[ATTRIBUTIONS.md](ATTRIBUTIONS.md)** before you go live: the placeholder photos
+come from a free API that does not grant re-use rights, so swap in your own.
 
 ---
 
-## Editing it yourself
-
-### Change a price or a cake
-
-Everything about a cake lives in **one place** — its card in `index.html`:
-
-```html
-<article class="cake-card"
-         data-cake="Red Velvet Cake"   <- name shown in the order dropdown
-         data-price="3250">            <- price, no commas
-```
-
-Change the name, price, description or photo there and the order form's dropdown updates
-itself. You never have to edit the dropdown by hand.
-
-### Replace the photos
-
-Drop your own pictures into `assets/img/` using the same file names:
-
-```
-hero.jpg
-cake-chocolate-fudge.jpg
-cake-chocolate-bundt.jpg
-cake-strawberry-tart.jpg
-cake-salted-caramel.jpg
-cake-pistachio-rose.jpg
-order-celebration.jpg
-```
-
-Square photos at **1200 × 1200** look best — the cards crop to 4:3 and the hero crops to
-a circle, so a square keeps the middle of the dish in frame. File names in caps must match
-exactly. The current placeholder photos are only 700 × 700, so your own will look sharper
-too.
-
-### Change the logo
-
-The header logo is an inline SVG near the top of `index.html` (search for
-`brand-mark`). The browser tab icon is generated by:
-
-```bash
-python3 tools/make_icons.py
-```
-
-Edit the colours at the top of that file and re-run it to restyle the icon.
-
-### Change the colours or fonts
-
-All of it is at the top of `css/style.css` in the `:root` block — one line each:
-
-```css
---color-primary: #c9a74d;   /* gold — buttons, prices, highlights */
---color-text:    #4c4c4c;   /* body text            */
---font-heading:  "Libre Caslon Text", Georgia, serif;
---font-body:     "Montserrat", sans-serif;
-```
-
----
-
-## Publishing it
-
-The site is plain HTML, CSS and JavaScript — no build step, no framework, no npm
-install. Any static host will serve it:
-
-- **Netlify** — drag the `pettycakes` folder onto <https://app.netlify.com/drop>. Free,
-  live URL in about a minute. Easiest option.
-- **GitHub Pages** — the repo is already set up; turn Pages on in Settings → Pages and
-  pick the `master` branch.
-- **Hostinger / any cPanel host** — upload the contents of this folder into `public_html`.
-
-Do not upload `tools/` or the markdown files; they are for you, not for visitors.
-
----
-
-## Project layout
+## What is in the box
 
 ```
 pettycakes/
-├── index.html              the whole website (one page)
-├── css/
-│   └── style.css           all styling + the scroll animations
-├── js/
-│   └── main.js             menu, scroll reveals, form logic
-│                           >>> SHOP config block is at the very top <<<
+├── index.html              the whole page (one file, no build step)
+├── css/style.css           the design system + every section
+├── js/main.js              SHOP config + menu engine + form logic
 ├── assets/
-│   ├── favicon-32.png      browser tab icon
-│   ├── apple-touch-icon.png
-│   ├── icon-192.png
-│   ├── icon-512.png
-│   └── img/                the 7 stock photos (replace with your own)
-├── tools/
-│   └── make_icons.py       regenerates the icons (pure Python, no libraries)
-├── ATTRIBUTIONS.md         photo credits and licences — read this
-├── README.md
-└── opencode.jsonc          per-project assistant permissions
+│   ├── img/                20 square photos
+│   ├── favicon-32.png      ┐
+│   ├── apple-touch-icon.png│ drawn by tools/make_icons.py
+│   ├── icon-192.png        │ (pure Python, no libraries)
+│   └── icon-512.png        ┘
+├── tools/make_icons.py     re-create the icons any time
+├── ATTRIBUTIONS.md         photo credits + how to replace them
+└── README.md
 ```
+
+No frameworks, no build step, no npm install. Open the file and it runs.
 
 ---
 
-## What was checked
+## Accessibility & browser support
 
-Tested in a real Chromium browser at 390px (phone), 820px (tablet) and 1400px (desktop):
-
-- No JavaScript errors, no failed requests, no horizontal scrolling on any screen size.
-- All 14 scroll-reveal blocks animate in, with a safety timer so nothing can get stuck
-  invisible.
-- The mobile hamburger opens and closes; tapping a link closes it; Escape closes it.
-- Form: empty submit is blocked, a bad email is caught, a short phone number is caught,
-  a missing cake is caught, a too-soon date is caught, and a valid order reaches the
-  success screen with a correctly pre-filled WhatsApp link.
-- "Order this" on every card selects the right cake in the form and scrolls to it.
-- All images have alt text and explicit sizes; every form field has a label; no
-  duplicate element IDs; all 12 internal links resolve.
-
-Respects `prefers-reduced-motion`, so visitors who turn animations off in their device
-settings get a still page instead.
+- Works in current Chrome, Edge, Firefox and Safari, on Windows, macOS, Linux, Android
+  and iOS.
+- Full keyboard support: skip link, visible focus rings on the cake cards, arrow keys in
+  the menu, Escape closes the mobile menu.
+- Every image has real alt text and fixed `width`/`height`, so nothing jumps while
+  loading. Every form field has a label. The detail panel announces the focused cake.
+- `prefers-reduced-motion` is respected: no scroll-hijacking, no auto-advancing slides,
+  no marquee.
+- Verified with zero console errors, zero failed requests, no horizontal overflow at
+  390 / 820 / 1280 / 1440 px, and no duplicate IDs or missing labels.
 
 ---
 
@@ -216,12 +156,6 @@ settings get a still page instead.
 
 | Version | Date | What changed |
 |---|---|---|
-| **v1.1** | 2026-09-26 | Replaced all seven photos after the first set were rejected as dull and homemade. New set chosen for genuine appetite appeal — glossy fudge squares, chocolate-ganache bundts, a bright strawberry tart, a salted-caramel cheesecake and a pistachio kunafa. The five cakes were renamed to match what is actually in each photo, prices and descriptions adjusted, credits rewritten. |
-| **v1.0** | 2026-09-26 | First release. One-page site: header with right-side menu, animated hero, about section with 3 steps, five-cake list with PKR prices, validating order form with WhatsApp handoff, footer with quote, scroll-reveal animations, custom cake-slice logo and generated favicons, placeholder stock photos with full credits. |
-
----
-
-## Licence
-
-Code in this project is yours to use and change for your bakery.
-Photos are third-party — see [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
+| **2.0** | 2026-09-26 | Complete redesign in the minon.com.tr style: white + Jost + `#888888` accent, uppercase headings, square corners, script wordmark. **New: the menu is a horizontal row driven by your page scroll**, with the focused cake's details in a panel on the right (arrow keys, jump dots, progress line, swipe fallback on phones, reduced-motion fallback). New hero slideshow (3 slides, auto-advance, pauses on hover), new Our Story section, scrolling text band, new How It Works section, "Also on the counter" photo grid, newsletter box in the footer. All 20 photos replaced with a freshly chosen, visually checked set; menu rebuilt around 8 cakes plus a "Your Own Design" tile priced on request. New monochrome favicons. |
+| 1.1 | 2026-09-22 | Replaced every stock photo with genuinely appetising cake shots after the first set was rejected as dull. Added `ATTRIBUTIONS.md`. |
+| 1.0 | 2026-09-22 | First release: one-page cake shop, five cakes, WhatsApp order hand-off, Formspree option. |
